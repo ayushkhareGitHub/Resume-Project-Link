@@ -233,7 +233,7 @@ a:hover {
 /* For Mobile Phones (Below 768px) */
 @media only screen and (max-width: 767px) {
     body {
-        font-size: 30px; /* Adjust font size for small screens */
+        font-size: 14px; /* Adjust font size for small screens */
     }
 
     .parallax-section .content {
