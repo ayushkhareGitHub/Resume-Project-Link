@@ -1,0 +1,275 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: url('Images/Background.webp') no-repeat center center/cover;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+/* Parallax Section */
+.parallax-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax-section .content {
+    background: rgba(0, 0, 0, 0.5); /* Dark transparent background */
+    color: #fff; /* White text for contrast */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 80%;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.content h1 {
+    margin: 0;
+    padding: 20px;
+}
+
+.content p {
+    padding: 10px;
+}
+
+.deactive{
+    display: none;
+}
+
+.active{
+    display: block;
+}
+
+/* Section for Text Content */
+.text-section {
+    padding: 40px 20px;
+    text-align: center;
+    background: #fff; /* White Background */
+    color: #1F2937; /* Dark Slate Text */
+}
+
+/* Photo Section */
+.photo-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    background: #fff; /* White Background */
+}
+
+.photo-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.photo-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.photo-card h3 {
+    margin: 0;
+    padding: 15px;
+    background: #3B82F6; /* Sky Blue Background */
+    color: #fff;
+    font-size: 18px;
+}
+
+.photo-card p {
+    padding: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+.photo-card .btn {
+    display: block;
+    margin: 10px auto;
+    width: 90%;
+    padding: 10px;
+    background: #3B82F6; /* Sky Blue */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.photo-card .btn:hover {
+    background: #2563EB; /* Darker Sky Blue */
+}
+
+.photo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Styles */
+.btn {
+    background: #3B82F6; /* Sky Blue */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background: #2563EB; /* Darker Sky Blue */
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: #3B82F6; /* Sky Blue */
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #F59E0B; /* Sunset Yellow on hover */
+}
+
+/* Contact Section Styles */
+
+.contact-section {
+    text-align: left;
+    padding: 10px;
+    background: #fff; /* White Background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section p {
+    color: rgba(0, 0, 0, 1.0);
+}
+
+.contact-icon {
+    font-size: 24px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.contact-link:hover .contact-icon {
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+.contact-link {
+    text-decoration: none;
+    color: #3B82F6; /* Sky Blue */
+    font-size: 18px;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #F59E0B; /* Sunset Yellow on hover */
+}
+
+/* Ensure content is visible */
+.parallax-section {
+    position: relative;
+    z-index: 1;
+}
+
+.parallax-section .content {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* Responsive Styles */
+
+/* For Laptops (1024px and above) */
+@media only screen and (min-width: 1024px) {
+    .parallax-section .content {
+        max-width: 70%;
+    }
+
+    .photo-section {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
+
+    .photo-card {
+        margin: 10px;
+    }
+}
+
+/* For iPads/Tablets (768px to 1023px) */
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+    .parallax-section .content {
+        max-width: 80%;
+    }
+
+    .photo-section {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .photo-card {
+        margin: 10px;
+    }
+}
+
+/* For Mobile Phones (Below 768px) */
+@media only screen and (max-width: 767px) {
+    body {
+        font-size: 14px; /* Adjust font size for small screens */
+    }
+
+    .parallax-section .content {
+        max-width: 90%;
+    }
+
+    .parallax-section {
+        padding: 10px;
+    }
+
+    .text-section {
+        padding: 20px;
+    }
+
+    .photo-section {
+        grid-template-columns: 1fr; /* Stack photo cards vertically */
+    }
+
+    .photo-card {
+        margin: 10px 0;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .contact-section {
+        padding: 20px;
+    }
+
+    .contact-icon {
+        font-size: 20px;
+    }
+
+    .contact-link {
+        font-size: 16px;
+    }
+}
